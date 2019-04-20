@@ -2564,6 +2564,7 @@
 				width: 100%;
 			}
 
+
 		.image.left {
 			float: left;
 			padding: 0 1.5em 1em 0;
@@ -2575,7 +2576,7 @@
 			padding: 0 0 1em 1.5em;
 			top: 0.25em;
 		}
-
+		
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;
@@ -3785,6 +3786,7 @@
 
 		}
 
+		
 /* Header */
 
 	#header {
@@ -3792,6 +3794,7 @@
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		flex-direction: row;
 		border-bottom: solid 5px #f56a6a;
 		padding: 6em 0 1em 0;
 		position: relative;
@@ -3806,16 +3809,37 @@
 		}
 
 		#header .logo {
+		    display: flex;
+		    flex-direction: column;
 			border-bottom: 0;
 			color: inherit;
 			font-family: "Roboto Slab", serif;
 			font-size: 1.125em;
 		}
-
-		#header .icons {
-			text-align: right;
+		#header .logo img { /* For NANOGrav logo */
+		    max-width: 30%;
 		}
 
+		#header .icons {
+		    border-bottom: 0;
+		    vertical-align: bottom;
+		    text-align: right;
+		}
+
+		#header .logoNSF { /* For NSF logo */
+		    align: right;
+		}
+		#header .logoNSF a {
+		    text-decoration: none;
+		    border-bottom: 0;
+		}
+		
+		#header .logoNSF img { 
+		    align: right;
+		    width: 18%;
+		}
+
+		
 		@media screen and (max-width: 1680px) {
 
 			#header {
